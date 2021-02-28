@@ -5,8 +5,8 @@ import java.sql.*;
 
 public class MainApp {
     private static final String url = "jdbc:mysql://localhost/students";
-    public static final String username = "root";
-    public static final String password = "";
+    private static final String username = "root";
+    private static final String password = "";
 
     private static Connection connection;
     private static Statement statement;
@@ -31,7 +31,7 @@ public class MainApp {
         }
     }
 
-    public static void createTable() throws SQLException {
+    private static void createTable() throws SQLException {
         Class<?> studentClass = Student.class;
         Field[] fields = studentClass.getDeclaredFields();
 
@@ -50,15 +50,15 @@ public class MainApp {
         statement.execute(query);
     }
 
-    public static void removeTable() throws SQLException {
+    private static void removeTable() throws SQLException {
         statement.executeUpdate("DROP TABLE IF EXISTS students;");
     }
 
-    public static void clearTable() throws SQLException {
+    private static void clearTable() throws SQLException {
         statement.executeUpdate("DELETE FROM students;");
     }
 
-    public static void insertStudent(Student student) throws SQLException {
+    static void insertStudent(Student student) throws SQLException {
         if (!statement.execute("INSERT INTO students (name, age) VALUES ('"+student.getName()+"', "+student.getAge()+");")) {
             System.out.println("Successful insert!");
         } else {
@@ -66,7 +66,7 @@ public class MainApp {
         }
     }
 
-    public static void getAllStudents() throws SQLException{
+    static void getAllStudents() throws SQLException{
         try (ResultSet rs = statement.executeQuery("SELECT * FROM students")) {
             System.out.println("\nid name age");
             while (rs.next()) {
@@ -102,7 +102,7 @@ public class MainApp {
         }
     }
 
-    public static void disconnect() {
+    private static void disconnect() {
         if (statement != null) {
             try {
                 statement.close();
