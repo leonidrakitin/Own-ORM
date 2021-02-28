@@ -19,9 +19,9 @@ public class MainApp {
             createTable();
 //            clearTable();
 
-            insertStudent(new Student("Lenya", 21));
-            insertStudent(new Student("Vanya", 20));
-            insertStudent(new Student("Dasha", 19));
+            insertData(new Student("Lenya", 21));
+            insertData(new Student("Vanya", 20));
+            insertData(new Student("Dasha", 19));
 
             getAllStudents();
         } catch (SQLException e) {
@@ -32,10 +32,9 @@ public class MainApp {
     }
 
     private static void createTable() throws SQLException {
-        Class<?> studentClass = Student.class;
-        Field[] fields = studentClass.getDeclaredFields();
+        String tableName = Student.class.getAnnotation(Table.class).name();
 
-        String tableName = studentClass.getAnnotation(Table.class).name();
+        Field[] fields = Student.class.getDeclaredFields();
         String query = "CREATE TABLE IF NOT EXISTS " + tableName + " (";
 
         for (Field o : fields) {
@@ -51,23 +50,29 @@ public class MainApp {
     }
 
     private static void removeTable() throws SQLException {
-        statement.executeUpdate("DROP TABLE IF EXISTS students;");
+        String tableName = Student.class.getAnnotation(Table.class).name();
+        statement.executeUpdate("DROP TABLE IF EXISTS "+tableName+";");
     }
 
     private static void clearTable() throws SQLException {
-        statement.executeUpdate("DELETE FROM students;");
+        String tableName = Student.class.getAnnotation(Table.class).name();
+        statement.executeUpdate("DELETE FROM "+tableName+";");
     }
 
-    static void insertStudent(Student student) throws SQLException {
-        if (!statement.execute("INSERT INTO students (name, age) VALUES ('"+student.getName()+"', "+student.getAge()+");")) {
+    static void insertData(Student student) throws SQLException {
+        String tableName = Student.class.getAnnotation(Table.class).name();
+
+        if (!statement.execute("INSERT INTO "+tableName+" (name, age) VALUES ('"+student.getName()+"', "+student.getAge()+");")) {
             System.out.println("Successful insert!");
         } else {
             System.out.println("Error insert!");
         }
     }
 
-    static void getAllStudents() throws SQLException{
-        try (ResultSet rs = statement.executeQuery("SELECT * FROM students")) {
+    static void getAllStudents() {
+        String tableName = Student.class.getAnnotation(Table.class).name();
+
+        try (ResultSet rs = statement.executeQuery("SELECT * FROM "+tableName+";")) {
             System.out.println("\nid name age");
             while (rs.next()) {
                 System.out.println(rs.getInt("id") + " " + rs.getString("name") + " " + rs.getInt("age"));
