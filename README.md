@@ -1,4 +1,21 @@
-# Out
+    MY OWN SIMPLE ORM [Java 8, MySQL 5.0.8]
+
+## ANNOTATION MAPPING
+### @interface Table (String name default "default")
+    @RetentionPolicy.RUNTIME
+    @ElementType.FIELD
+The @Table annotation can have an optional name argument which specifies the table name. If not specified, the class name with normalized case is used by default.
+    
+### @Column (String type default "int", int size default "11")
+    @RetentionPolicy.RUNTIME
+    @ElementType.FIELD
+The @Column annotation can have an optional type and size arguments which specifies the column propetries. If not specified, the class name with normalized case is used by default.
+
+## Main methos 
+#### private static void createTable() throws SQLException 
+#### static void insertData(Student student) throws SQLException 
+
+## Out
 
     Loading driver...
     Driver loaded!
