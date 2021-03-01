@@ -6,16 +6,18 @@
 ### @interface Table ()
 * @RetentionPolicy.RUNTIME
 * @ElementType.FIELD
-    String  name        default "default"
+
+        String  name        default "default"
 The @Table annotation can have an optional name argument which specifies the table name. If not specified, the class name with normalized case is used by default.
     
 
 ### @interface@Column ()
 * @RetentionPolicy.RUNTIME
 * @ElementType.FIELD
-    boolean primary     default false, 
-    String  type        default "int", 
-    int     size        default "11"
+
+        boolean primary     default false, 
+        String  type        default "int", 
+        int     size        default "11"
 
 The @Column annotation can have an optional primary, type and size arguments which specifies the column propetries. If not specified, the class name with normalized case is used by default.
 
