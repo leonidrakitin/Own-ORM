@@ -22,33 +22,33 @@ The @Table annotation can have an optional name argument which specifies the tab
 The @Column annotation can have an optional primary, type and size arguments which specifies the column propetries. If not specified, the class name with normalized case is used by default.
 
 ## Main methods 
-###### private static void createTable() throws SQLException 
-###### static void insertData(Student student) throws SQLException 
-###### private static void removeTable() throws SQLException
-###### private static void clearTable() throws SQLException
-###### static void getAllStudents()
-###### private static void loadDriver() throws SQLException
+###### private static void createTable(Class c) throws SQLException 
+###### private static void removeTable(Class c) throws SQLException
+###### private static void clearTable(Class c) throws SQLException
+###### static void insertData(Class c, Object... params) throws SQLException
+###### static void printAllData(Class c)
 #
 ###### private static void connect() throws SQLException
 ###### private static void disconnect()
+###### private static void loadDriver() throws SQLException
 
 
 
 ## Out
 
-    Loading driver...
-    Driver loaded!
-    Connecting database...
-    Database successfully connected!
-    Successful insert!
-    Successful insert!
-    Successful insert!
+        Loading driver...
+        Driver loaded!
+        Connecting database...
+        Database successfully connected!
 
-    id name age
-    1 Lenya 21
-    2 Vanya 20
-    3 Dasha 19
+        id name age
+        61 Misha 17
+        62 Dima 16
+        63 Petya 25
+        64 Lenya 21
+        65 Dasha 19
+        66 Vanya 20
 
-    Database successfully disconnected!
+        Database successfully disconnected!
 
-    Process finished with exit code 0
+        Process finished with exit code 0
