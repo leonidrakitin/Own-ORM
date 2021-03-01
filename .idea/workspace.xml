@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="565b8ec5-4cb4-486f-b9f8-36101ad97c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mypetproject/mysqlExampleORM/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mypetproject/mysqlExampleORM/Column.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mypetproject/mysqlExampleORM/MainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mypetproject/mysqlExampleORM/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mypetproject/mysqlExampleORM/Student.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +48,9 @@
   <component name="ProjectId" id="1p84L3uEZNtf3uddb2PQhtyGrIh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/mypetproject/mysqlExampleORM" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,8 +70,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mypetproject.mysqlExampleORM.MainApp" />
+    <configuration name="Processor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mypetproject.mysqlExampleORM.Processor" />
       <module name="mysqlExampleORM" />
       <extension name="coverage">
         <pattern>
@@ -76,7 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.Processor" />
       </list>
     </recent_temporary>
   </component>

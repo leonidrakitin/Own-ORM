@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface Column {
+    boolean primary() default false;
+    boolean ai() default false;
     String type() default "int";
     int size() default 11;
 }
