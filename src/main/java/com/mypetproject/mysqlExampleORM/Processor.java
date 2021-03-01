@@ -39,7 +39,6 @@ public class Processor {
 
             for (Student st : list) {
                 insertData(Student.class, st.getName(), st.getAge());
-                System.out.println(st.getId()+" "+st.getName()+ " "+st.getAge());
             }
 
             printAllData(Student.class);
