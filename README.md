@@ -4,16 +4,16 @@
 
 
 ### @interface Table ()
-* @RetentionPolicy.RUNTIME
-* @ElementType.FIELD
+    @RetentionPolicy.RUNTIME
+    @ElementType.FIELD
 
         String  name        default "default"
 The @Table annotation can have an optional name argument which specifies the table name. If not specified, the class name with normalized case is used by default.
     
 
-### @interface@Column ()
-* @RetentionPolicy.RUNTIME
-* @ElementType.FIELD
+### @interface Column ()
+    RetentionPolicy.RUNTIME
+    ElementType.FIELD
 
         boolean primary     default false, 
         String  type        default "int", 
