@@ -2,18 +2,20 @@
 
 ## ANNOTATION MAPPING
 
-    @RetentionPolicy.RUNTIME
-    @ElementType.FIELD
+
 ### @interface Table ()
-    String name default "default"
+* @RetentionPolicy.RUNTIME
+* @ElementType.FIELD
+    String  name        default "default"
 The @Table annotation can have an optional name argument which specifies the table name. If not specified, the class name with normalized case is used by default.
     
-    @RetentionPolicy.RUNTIME
-    @ElementType.FIELD
-### @Column ()
-    boolean primary default false, 
-    String type default "int", 
-    int size default "11"
+
+### @interface@Column ()
+* @RetentionPolicy.RUNTIME
+* @ElementType.FIELD
+    boolean primary     default false, 
+    String  type        default "int", 
+    int     size        default "11"
 
 The @Column annotation can have an optional primary, type and size arguments which specifies the column propetries. If not specified, the class name with normalized case is used by default.
 
