@@ -11,9 +11,18 @@ The @Table annotation can have an optional name argument which specifies the tab
     @ElementType.FIELD
 The @Column annotation can have an optional type and size arguments which specifies the column propetries. If not specified, the class name with normalized case is used by default.
 
-## Main methos 
-#### private static void createTable() throws SQLException 
-#### static void insertData(Student student) throws SQLException 
+## Main methods 
+###### private static void createTable() throws SQLException 
+###### static void insertData(Student student) throws SQLException 
+###### private static void removeTable() throws SQLException
+###### private static void clearTable() throws SQLException
+###### static void getAllStudents()
+###### private static void loadDriver() throws SQLException
+#
+###### private static void connect() throws SQLException
+###### private static void disconnect()
+
+
 
 ## Out
 
